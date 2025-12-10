@@ -264,7 +264,7 @@ Las contribuciones son bienvenidas y apreciadas. Si quieres contribuir:
 2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
 3. Commit tus cambios (`git commit -m 'Add: nueva funcionalidad increíble'`)
 4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un **Pull Request**
+5. Abre un **Pull Request** usando el [template de PR](.github/PULL_REQUEST_TEMPLATE.md)
 
 ### Guía de estilo
 
@@ -283,6 +283,10 @@ Si encuentras un bug, por favor abre un **issue** usando el [template de reporte
 - Screenshots (si aplica)
 - Versión de iOS/watchOS
 
+### Solicitud de features
+
+¿Tienes una idea para mejorar la app? Usa el [template de feature request](.github/ISSUE_TEMPLATE/feature_request.md) para proponer nuevas características.
+
 ## 💬 Contacto
 
 **Desarrollador**: Tu Nombre
@@ -296,7 +300,7 @@ Si encuentras un bug, por favor abre un **issue** usando el [template de reporte
 
 <div align="center">
 
-### ⭐ Si te gusta este proyecto, ¡dale una estrella
+### ⭐ Si te gusta este proyecto, dale una estrella
 
 Hecho con ❤️ y SwiftUI
 

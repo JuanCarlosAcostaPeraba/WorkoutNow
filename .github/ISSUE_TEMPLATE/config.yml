@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discusión General
+    url: https://github.com/JuanCarlosAcostaPeraba/WorkoutNow/discussions
+    about: Para preguntas, ideas o discusiones generales
+  - name: 📖 Documentación
+    url: https://github.com/JuanCarlosAcostaPeraba/WorkoutNow/blob/main/README.md
+    about: Consulta el README para información sobre el proyecto
