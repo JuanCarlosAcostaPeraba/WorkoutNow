@@ -287,9 +287,13 @@ Si encuentras un bug, por favor abre un **issue** usando el [template de reporte
 
 ¿Tienes una idea para mejorar la app? Usa el [template de feature request](.github/ISSUE_TEMPLATE/feature_request.md) para proponer nuevas características.
 
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
 ## 💬 Contacto
 
-**Desarrollador**: Tu Nombre
+**Desarrollador**: Juan Carlos Acosta Peraba
 
 - GitHub: [@JuanCarlosAcostaPeraba](https://github.com/JuanCarlosAcostaPeraba)
 - Email: [juancarlos.ap.dev@gmail.com](mailto:juancarlos.ap.dev@gmail.com)
