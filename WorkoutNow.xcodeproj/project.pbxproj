@@ -6,6 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CE556D9B2EEB4F4300B2F2C9 /* WorkoutPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556D9A2EEB4F4300B2F2C9 /* WorkoutPlayerViewModel.swift */; };
+		CE556D9D2EEB4F6500B2F2C9 /* WorkoutPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556D9C2EEB4F6500B2F2C9 /* WorkoutPlayerView.swift */; };
+		CE556DA02EEB4F8C00B2F2C9 /* SwiftDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556D9F2EEB4F8C00B2F2C9 /* SwiftDataStack.swift */; };
+		CE556DA52EEB4FC200B2F2C9 /* WorkoutNowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556DA42EEB4FC200B2F2C9 /* WorkoutNowApp.swift */; };
+		CE556DA72EEB4FCC00B2F2C9 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556DA62EEB4FCC00B2F2C9 /* AppTheme.swift */; };
+		CE556DA82EEB508500B2F2C9 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D672EEA4A3C001C5439 /* Routine.swift */; };
+		CECB6D742EEA4A3C001C5439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECB6D702EEA4A3C001C5439 /* Assets.xcassets */; };
+		CECB6D752EEA4A3C001C5439 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D662EEA4A3C001C5439 /* Exercise.swift */; };
+		CECB6D772EEA4A3C001C5439 /* RoutineListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D692EEA4A3C001C5439 /* RoutineListViewModel.swift */; };
+		CECB6D782EEA4A3C001C5439 /* RoutineCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D6B2EEA4A3C001C5439 /* RoutineCard.swift */; };
+		CECB6D792EEA4A3C001C5439 /* RoutineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D6D2EEA4A3C001C5439 /* RoutineDetailView.swift */; };
+		CECB6D7A2EEA4A3C001C5439 /* RoutineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D6E2EEA4A3C001C5439 /* RoutineListView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CE5308F42EEA282F00AC11EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +42,21 @@
 		CE5308E62EEA282D00AC11EA /* WorkoutNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5308F32EEA282F00AC11EA /* WorkoutNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5308FD2EEA282F00AC11EA /* WorkoutNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE556D9A2EEB4F4300B2F2C9 /* WorkoutPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayerViewModel.swift; sourceTree = "<group>"; };
+		CE556D9C2EEB4F6500B2F2C9 /* WorkoutPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlayerView.swift; sourceTree = "<group>"; };
+		CE556D9F2EEB4F8C00B2F2C9 /* SwiftDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataStack.swift; sourceTree = "<group>"; };
+		CE556DA42EEB4FC200B2F2C9 /* WorkoutNowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNowApp.swift; sourceTree = "<group>"; };
+		CE556DA62EEB4FCC00B2F2C9 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		CECB6D662EEA4A3C001C5439 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		CECB6D672EEA4A3C001C5439 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		CECB6D692EEA4A3C001C5439 /* RoutineListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListViewModel.swift; sourceTree = "<group>"; };
+		CECB6D6B2EEA4A3C001C5439 /* RoutineCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCard.swift; sourceTree = "<group>"; };
+		CECB6D6D2EEA4A3C001C5439 /* RoutineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDetailView.swift; sourceTree = "<group>"; };
+		CECB6D6E2EEA4A3C001C5439 /* RoutineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListView.swift; sourceTree = "<group>"; };
+		CECB6D702EEA4A3C001C5439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CE5308E82EEA282D00AC11EA /* WorkoutNow */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WorkoutNow;
-			sourceTree = "<group>";
-		};
 		CE5308F62EEA282F00AC11EA /* WorkoutNowTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WorkoutNowTests;
@@ -75,7 +97,7 @@
 		CE5308DD2EEA282D00AC11EA = {
 			isa = PBXGroup;
 			children = (
-				CE5308E82EEA282D00AC11EA /* WorkoutNow */,
+				CECB6D732EEA4A3C001C5439 /* WorkoutNow */,
 				CE5308F62EEA282F00AC11EA /* WorkoutNowTests */,
 				CE5309002EEA282F00AC11EA /* WorkoutNowUITests */,
 				CE5308E72EEA282D00AC11EA /* Products */,
@@ -92,6 +114,105 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CE556D982EEB4ED400B2F2C9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE556DA42EEB4FC200B2F2C9 /* WorkoutNowApp.swift */,
+				CE556DA62EEB4FCC00B2F2C9 /* AppTheme.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE556D992EEB4EF300B2F2C9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE556D9E2EEB4F8200B2F2C9 /* LocalStore */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE556D9E2EEB4F8200B2F2C9 /* LocalStore */ = {
+			isa = PBXGroup;
+			children = (
+				CE556D9F2EEB4F8C00B2F2C9 /* SwiftDataStack.swift */,
+			);
+			path = LocalStore;
+			sourceTree = "<group>";
+		};
+		CE556DA12EEB4F9800B2F2C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE556DA22EEB4FA700B2F2C9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE556DA32EEB4FB200B2F2C9 /* Constants */,
+				CE556DA12EEB4F9800B2F2C9 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CE556DA32EEB4FB200B2F2C9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CECB6D682EEA4A3C001C5439 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CECB6D662EEA4A3C001C5439 /* Exercise.swift */,
+				CECB6D672EEA4A3C001C5439 /* Routine.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CECB6D6A2EEA4A3C001C5439 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CECB6D692EEA4A3C001C5439 /* RoutineListViewModel.swift */,
+				CE556D9A2EEB4F4300B2F2C9 /* WorkoutPlayerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CECB6D6C2EEA4A3C001C5439 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CECB6D6B2EEA4A3C001C5439 /* RoutineCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CECB6D6F2EEA4A3C001C5439 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECB6D6C2EEA4A3C001C5439 /* Components */,
+				CECB6D6D2EEA4A3C001C5439 /* RoutineDetailView.swift */,
+				CECB6D6E2EEA4A3C001C5439 /* RoutineListView.swift */,
+				CE556D9C2EEB4F6500B2F2C9 /* WorkoutPlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CECB6D732EEA4A3C001C5439 /* WorkoutNow */ = {
+			isa = PBXGroup;
+			children = (
+				CE556DA22EEB4FA700B2F2C9 /* Shared */,
+				CE556D992EEB4EF300B2F2C9 /* Services */,
+				CE556D982EEB4ED400B2F2C9 /* App */,
+				CECB6D682EEA4A3C001C5439 /* Models */,
+				CECB6D6A2EEA4A3C001C5439 /* ViewModels */,
+				CECB6D6F2EEA4A3C001C5439 /* Views */,
+				CECB6D702EEA4A3C001C5439 /* Assets.xcassets */,
+			);
+			path = WorkoutNow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +227,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CE5308E82EEA282D00AC11EA /* WorkoutNow */,
 			);
 			name = WorkoutNow;
 			packageProductDependencies = (
@@ -212,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECB6D742EEA4A3C001C5439 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +355,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECB6D752EEA4A3C001C5439 /* Exercise.swift in Sources */,
+				CE556DA82EEB508500B2F2C9 /* Routine.swift in Sources */,
+				CECB6D772EEA4A3C001C5439 /* RoutineListViewModel.swift in Sources */,
+				CE556DA72EEB4FCC00B2F2C9 /* AppTheme.swift in Sources */,
+				CECB6D782EEA4A3C001C5439 /* RoutineCard.swift in Sources */,
+				CECB6D792EEA4A3C001C5439 /* RoutineDetailView.swift in Sources */,
+				CE556D9D2EEB4F6500B2F2C9 /* WorkoutPlayerView.swift in Sources */,
+				CECB6D7A2EEA4A3C001C5439 /* RoutineListView.swift in Sources */,
+				CE556DA02EEB4F8C00B2F2C9 /* SwiftDataStack.swift in Sources */,
+				CE556D9B2EEB4F4300B2F2C9 /* WorkoutPlayerViewModel.swift in Sources */,
+				CE556DA52EEB4FC200B2F2C9 /* WorkoutNowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +523,9 @@
 		CE5309082EEA282F00AC11EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SYZDNA652D;
@@ -425,8 +556,9 @@
 		CE5309092EEA282F00AC11EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SYZDNA652D;
