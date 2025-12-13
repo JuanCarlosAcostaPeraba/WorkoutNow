@@ -1,5 +1,5 @@
 //
-//  RoutineListView.swift
+//  RoutineDetailView.swift
 //  WorkoutNow
 //
 //  Created by Juan Carlos Acosta Perabá on 10/12/25.
@@ -13,6 +13,16 @@ struct RoutineDetailView: View {
 
     var body: some View {
         List {
+            Section {
+                NavigationLink {
+                    WorkoutPlayerView(steps: routine.toWorkoutSteps())
+                } label: {
+                    HStack {
+                        Label("Start", systemImage: "play.fill")
+                        Spacer()
+                    }
+                }
+            }
             ForEach(routine.exercises) { ex in
                 HStack {
                     Text(ex.name)
@@ -30,6 +40,20 @@ struct RoutineDetailView: View {
             }
         }
         .navigationTitle(routine.name)
+    }
+}
+
+private extension Routine {
+    func toWorkoutSteps() -> [WorkoutStep] {
+        exercises.map { ex in
+            WorkoutStep(
+                kind: .exercise,
+                title: ex.name,
+                durationSeconds: ex.duration,
+                reps: ex.reps,
+                notes: nil
+            )
+        }
     }
 }
 
