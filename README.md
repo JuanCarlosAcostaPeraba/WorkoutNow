@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/logo.png" alt="Workout Now Logo" width="200">
+
 # 💪 WORKOUT NOW
 
 ### Tu compañero de entrenamiento
