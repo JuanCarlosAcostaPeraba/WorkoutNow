@@ -9,6 +9,11 @@ import Foundation
 import Combine
 import SwiftUI
 
+#if canImport(UIKit)
+import UIKit
+import AudioToolbox
+#endif
+
 @MainActor
 final class WorkoutPlayerViewModel: ObservableObject {
 
@@ -18,6 +23,11 @@ final class WorkoutPlayerViewModel: ObservableObject {
         case finished
         case paused
     }
+
+#if canImport(UIKit)
+    private let notificationHaptics = UINotificationFeedbackGenerator()
+    private let impactHaptics = UIImpactFeedbackGenerator(style: .medium)
+#endif
 
     @Published private(set) var steps: [WorkoutStep]
     @Published private(set) var index: Int = 0
@@ -43,6 +53,7 @@ final class WorkoutPlayerViewModel: ObservableObject {
     func start() {
         guard state != .running else { return }
         state = .running
+        prepareFeedback()
         runTimerIfNeeded()
     }
 
@@ -55,6 +66,7 @@ final class WorkoutPlayerViewModel: ObservableObject {
     func resume() {
         guard state == .paused else { return }
         state = .running
+        prepareFeedback()
         runTimerIfNeeded()
     }
 
@@ -64,9 +76,11 @@ final class WorkoutPlayerViewModel: ObservableObject {
         if index >= steps.count {
             state = .finished
             remainingSeconds = 0
+            triggerFinishedFeedback()
             return
         }
         primeCurrentStep()
+        triggerStepTransitionFeedback()
         if state == .running { runTimerIfNeeded() }
     }
 
@@ -74,6 +88,7 @@ final class WorkoutPlayerViewModel: ObservableObject {
         stopTimer()
         index = max(0, index - 1)
         primeCurrentStep()
+        triggerStepTransitionFeedback()
         if state == .running { runTimerIfNeeded() }
     }
 
@@ -114,7 +129,8 @@ final class WorkoutPlayerViewModel: ObservableObject {
         if remainingSeconds > 0 {
             remainingSeconds -= 1
         } else {
-            // Auto-avanza al acabar el tiempo
+            // Feedback + auto-advance when time ends
+            triggerStepTransitionFeedback()
             next()
         }
     }
@@ -122,6 +138,30 @@ final class WorkoutPlayerViewModel: ObservableObject {
     private func stopTimer() {
         timer?.invalidate()
         timer = nil
+    }
+
+    private func prepareFeedback() {
+#if canImport(UIKit)
+        notificationHaptics.prepare()
+        impactHaptics.prepare()
+#endif
+    }
+
+    private func triggerStepTransitionFeedback() {
+#if canImport(UIKit)
+        // Light haptic + subtle system sound
+        impactHaptics.impactOccurred()
+        AudioServicesPlaySystemSound(1104)
+        impactHaptics.prepare()
+#endif
+    }
+
+    private func triggerFinishedFeedback() {
+#if canImport(UIKit)
+        notificationHaptics.notificationOccurred(.success)
+        AudioServicesPlaySystemSound(1110)
+        notificationHaptics.prepare()
+#endif
     }
 
     deinit {
