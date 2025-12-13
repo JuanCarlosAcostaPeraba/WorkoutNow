@@ -13,6 +13,8 @@
 		CE556DA52EEB4FC200B2F2C9 /* WorkoutNowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556DA42EEB4FC200B2F2C9 /* WorkoutNowApp.swift */; };
 		CE556DA72EEB4FCC00B2F2C9 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE556DA62EEB4FCC00B2F2C9 /* AppTheme.swift */; };
 		CE556DA82EEB508500B2F2C9 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D672EEA4A3C001C5439 /* Routine.swift */; };
+		CEACEA7E2EEE23E20025B293 /* WorkoutStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACEA7D2EEE23E20025B293 /* WorkoutStep.swift */; };
+		CEACEA802EEE240E0025B293 /* NavySealRoutineBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACEA7F2EEE240E0025B293 /* NavySealRoutineBuilder.swift */; };
 		CECB6D742EEA4A3C001C5439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECB6D702EEA4A3C001C5439 /* Assets.xcassets */; };
 		CECB6D752EEA4A3C001C5439 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D662EEA4A3C001C5439 /* Exercise.swift */; };
 		CECB6D772EEA4A3C001C5439 /* RoutineListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB6D692EEA4A3C001C5439 /* RoutineListViewModel.swift */; };
@@ -47,6 +49,8 @@
 		CE556D9F2EEB4F8C00B2F2C9 /* SwiftDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataStack.swift; sourceTree = "<group>"; };
 		CE556DA42EEB4FC200B2F2C9 /* WorkoutNowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNowApp.swift; sourceTree = "<group>"; };
 		CE556DA62EEB4FCC00B2F2C9 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		CEACEA7D2EEE23E20025B293 /* WorkoutStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStep.swift; sourceTree = "<group>"; };
+		CEACEA7F2EEE240E0025B293 /* NavySealRoutineBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavySealRoutineBuilder.swift; sourceTree = "<group>"; };
 		CECB6D662EEA4A3C001C5439 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		CECB6D672EEA4A3C001C5439 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		CECB6D692EEA4A3C001C5439 /* RoutineListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListViewModel.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				CE556D9E2EEB4F8200B2F2C9 /* LocalStore */,
+				CEACEA7F2EEE240E0025B293 /* NavySealRoutineBuilder.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			children = (
 				CECB6D662EEA4A3C001C5439 /* Exercise.swift */,
 				CECB6D672EEA4A3C001C5439 /* Routine.swift */,
+				CEACEA7D2EEE23E20025B293 /* WorkoutStep.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -362,6 +368,8 @@
 				CECB6D782EEA4A3C001C5439 /* RoutineCard.swift in Sources */,
 				CECB6D792EEA4A3C001C5439 /* RoutineDetailView.swift in Sources */,
 				CE556D9D2EEB4F6500B2F2C9 /* WorkoutPlayerView.swift in Sources */,
+				CEACEA802EEE240E0025B293 /* NavySealRoutineBuilder.swift in Sources */,
+				CEACEA7E2EEE23E20025B293 /* WorkoutStep.swift in Sources */,
 				CECB6D7A2EEA4A3C001C5439 /* RoutineListView.swift in Sources */,
 				CE556DA02EEB4F8C00B2F2C9 /* SwiftDataStack.swift in Sources */,
 				CE556D9B2EEB4F4300B2F2C9 /* WorkoutPlayerViewModel.swift in Sources */,
