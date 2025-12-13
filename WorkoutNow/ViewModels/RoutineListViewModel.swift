@@ -10,20 +10,20 @@ import Combine
 
 @MainActor
 final class RoutineListViewModel: ObservableObject {
-
+    
     @Published var routines: [Routine] = []
-
+    
     init() {
         loadMockRoutines()
     }
-
+    
     private func loadMockRoutines() {
         routines = [
             makeNavySealRoutine(),
             makeFunctionalStrengthStationsRoutine()
         ]
     }
-
+    
     private func makeNavySealRoutine() -> Routine {
         Routine(
             name: "Navy SEAL (Básico)",
@@ -45,10 +45,10 @@ final class RoutineListViewModel: ObservableObject {
             ]
         )
     }
-
+    
     private func makeFunctionalStrengthStationsRoutine() -> Routine {
         var exercises: [Exercise] = []
-
+        
         func addRounds(_ titlePrefix: String, roundNames: [String]) {
             for (i, name) in roundNames.enumerated() {
                 exercises.append(
@@ -59,7 +59,7 @@ final class RoutineListViewModel: ObservableObject {
                 )
             }
         }
-
+        
         // Estación 1 — Remo (18 rondas, variando agarre)
         let rowGrips: [String] = [
             "Agarre normal", "Agarre normal",
@@ -74,10 +74,10 @@ final class RoutineListViewModel: ObservableObject {
             "Agarre preferido (intenso)"
         ]
         addRounds("Estación 1 · Remo", roundNames: rowGrips)
-
+        
         // Estación 1 — Correr (18 rondas)
         addRounds("Estación 1 · Correr", roundNames: Array(repeating: "Cinta o elíptica", count: 18))
-
+        
         // Estación 2
         let station2: [String] = [
             "Sentadillas con pesa rusa",
@@ -100,7 +100,7 @@ final class RoutineListViewModel: ObservableObject {
             "Plancha lateral con movimiento oblicuo (otro lado)"
         ]
         addRounds("Estación 2", roundNames: station2)
-
+        
         // Estación 3
         let station3: [String] = [
             "Zancada hacia atrás",
@@ -123,7 +123,7 @@ final class RoutineListViewModel: ObservableObject {
             "Plancha lateral con movimiento oblicuo (otro lado)"
         ]
         addRounds("Estación 3", roundNames: station3)
-
+        
         // Estación 4
         let station4: [String] = [
             "Flexión a 4 tiempos",
@@ -146,11 +146,27 @@ final class RoutineListViewModel: ObservableObject {
             "Plancha lateral con movimiento oblicuo (otro lado)"
         ]
         addRounds("Estación 4", roundNames: station4)
-
+        
         return Routine(
             name: "Fuerza funcional (Estaciones)",
             description: "4 estaciones · 18 rondas de 30s. Enfocado a fuerza funcional.",
             exercises: exercises
         )
+    }
+    
+    
+}
+
+// MARK: - Routine Icon Mapping (MVP)
+extension Routine {
+    var iconName: String {
+        switch name {
+        case _ where name.contains("Navy SEAL"):
+            return "figure.strengthtraining.traditional"
+        case _ where name.contains("Fuerza funcional"):
+            return "bolt.circle.fill"
+        default:
+            return "figure.walk"
+        }
     }
 }

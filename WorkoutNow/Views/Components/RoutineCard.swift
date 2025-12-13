@@ -12,7 +12,7 @@ struct RoutineCard: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "figure.strengthtraining.traditional")
+            Image(systemName: routine.iconName)
                 .font(.largeTitle)
                 .foregroundStyle(.blue)
 
