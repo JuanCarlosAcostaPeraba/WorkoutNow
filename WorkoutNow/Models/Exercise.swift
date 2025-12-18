@@ -6,22 +6,21 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Exercise: Identifiable, Codable, Equatable {
-    let id: UUID
+@Model
+final class Exercise {
     var name: String
     var duration: Int?      // en segundos (opcional si es "al fallo")
     var reps: Int?          // opcional
     var restAfter: Int?     // descanso tras este ejercicio (segundos)
 
     init(
-        id: UUID = UUID(),
         name: String,
         duration: Int? = nil,
         reps: Int? = nil,
         restAfter: Int? = nil
     ) {
-        self.id = id
         self.name = name
         self.duration = duration
         self.reps = reps

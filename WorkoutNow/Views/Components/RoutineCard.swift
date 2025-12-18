@@ -20,7 +20,7 @@ struct RoutineCard: View {
                 Text(routine.name)
                     .font(.headline)
 
-                if let desc = routine.description {
+                if let desc = routine.details {
                     Text(desc)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
