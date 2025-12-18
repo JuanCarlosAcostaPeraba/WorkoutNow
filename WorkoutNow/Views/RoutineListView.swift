@@ -15,10 +15,16 @@ struct RoutineListView: View {
 
     var body: some View {
         NavigationStack {
-            List(routines) { routine in
-                NavigationLink(destination: RoutineDetailView(routine: routine)) {
-                    RoutineCard(routine: routine)
+            ZStack {
+                AppTheme.gradientBackground
+                    .ignoresSafeArea()
+
+                List(routines) { routine in
+                    NavigationLink(destination: RoutineDetailView(routine: routine)) {
+                        RoutineCard(routine: routine)
+                    }
                 }
+                .scrollContentBackground(.hidden)
             }
             .navigationTitle("Rutinas")
         }

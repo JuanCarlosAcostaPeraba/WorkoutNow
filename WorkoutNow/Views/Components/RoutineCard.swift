@@ -14,7 +14,7 @@ struct RoutineCard: View {
         HStack {
             Image(systemName: routine.iconName)
                 .font(.largeTitle)
-                .foregroundStyle(.blue)
+                .foregroundStyle(AppTheme.accent)
 
             VStack(alignment: .leading) {
                 Text(routine.name)
@@ -29,7 +29,11 @@ struct RoutineCard: View {
 
             Spacer()
         }
-        .padding(.vertical, 6)
+        .padding()
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .shadow(radius: 2)
+        .padding(.horizontal)
     }
 }
 

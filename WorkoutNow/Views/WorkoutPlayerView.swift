@@ -15,29 +15,54 @@ struct WorkoutPlayerView: View {
     }
 
     var body: some View {
-        VStack(spacing: 16) {
-            header
-            card
-            controls
-            Spacer()
+        ZStack {
+            AppTheme.gradientBackground
+                .ignoresSafeArea()
+
+            VStack(spacing: 20) {
+                header
+                card
+                controls
+                Spacer()
+            }
+            .padding()
         }
-        .padding()
         .navigationTitle("Workout")
         .navigationBarTitleDisplayMode(.inline)
     }
 
     private var header: some View {
         HStack {
-            Text(vm.progressText)
-                .font(.subheadline)
+            Label(vm.progressText, systemImage: "bolt.fill")
+                .font(.subheadline.weight(.medium))
                 .foregroundStyle(.secondary)
+
             Spacer()
+
             if vm.state == .running {
-                Button("Pause") { vm.pause() }
+                Button(action: { vm.pause() }) {
+                    Image(systemName: "pause.fill")
+                        .font(.title2)
+                        .padding(10)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+                }
             } else if vm.state == .paused {
-                Button("Resume") { vm.resume() }
+                Button(action: { vm.resume() }) {
+                    Image(systemName: "play.fill")
+                        .font(.title2)
+                        .padding(10)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+                }
             } else {
-                Button("Start") { vm.start() }
+                Button(action: { vm.start() }) {
+                    Image(systemName: "play.fill")
+                        .font(.title2)
+                        .padding(10)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+                }
             }
         }
     }
@@ -86,13 +111,24 @@ struct WorkoutPlayerView: View {
     }
 
     private var controls: some View {
-        HStack(spacing: 12) {
-            Button("Back") { vm.previous() }
-                .buttonStyle(.bordered)
+        HStack(spacing: 32) {
+            Button(action: { vm.previous() }) {
+                Image(systemName: "backward.fill")
+                    .font(.title2)
+                    .padding(12)
+                    .background(.ultraThinMaterial)
+                    .clipShape(Circle())
+            }
 
-            Button("Next") { vm.next() }
-                .buttonStyle(.borderedProminent)
+            Button(action: { vm.next() }) {
+                Image(systemName: "forward.fill")
+                    .font(.title2)
+                    .padding(12)
+                    .background(.ultraThinMaterial)
+                    .clipShape(Circle())
+            }
         }
+        .foregroundStyle(.primary)
         .disabled(vm.state == .finished)
     }
 

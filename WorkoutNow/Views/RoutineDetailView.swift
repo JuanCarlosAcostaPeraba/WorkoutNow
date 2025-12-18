@@ -12,32 +12,39 @@ struct RoutineDetailView: View {
     let routine: Routine
 
     var body: some View {
-        List {
-            Section {
-                NavigationLink {
-                    WorkoutPlayerView(steps: routine.toWorkoutSteps())
-                } label: {
+        ZStack {
+            AppTheme.gradientBackground
+                .ignoresSafeArea()
+
+            List {
+                Section {
+                    NavigationLink {
+                        WorkoutPlayerView(steps: routine.toWorkoutSteps())
+                    } label: {
+                        HStack {
+                            Label("Start", systemImage: "play.fill")
+                            Spacer()
+                        }
+                    }
+                }
+
+                ForEach(routine.exercises) { ex in
                     HStack {
-                        Label("Start", systemImage: "play.fill")
+                        Text(ex.name)
+
                         Spacer()
+
+                        if let reps = ex.reps {
+                            Text("\(reps) reps")
+                                .foregroundStyle(.secondary)
+                        } else if let duration = ex.duration {
+                            Text("\(duration)s")
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
             }
-            ForEach(routine.exercises) { ex in
-                HStack {
-                    Text(ex.name)
-
-                    Spacer()
-
-                    if let reps = ex.reps {
-                        Text("\(reps) reps")
-                            .foregroundStyle(.secondary)
-                    } else if let duration = ex.duration {
-                        Text("\(duration)s")
-                            .foregroundStyle(.secondary)
-                    }
-                }
-            }
+            .scrollContentBackground(.hidden)
         }
         .navigationTitle(routine.name)
     }
